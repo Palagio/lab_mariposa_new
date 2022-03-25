@@ -85,8 +85,8 @@ class ProductDetailPage extends GetView<ProductDetailController> {
                     child: SizedBox(
                       width: context.widthTransformer(reducedBy: 10),
                       child: LaboratorioButton(
-                        label: 'ADICIONAR',
-                        onPressed: () {},
+                        label: controller.alreadyAdded ? 'ATUALIZAR' : 'ADICIONAR',
+                        onPressed: controller.addProductInShoppingCard,
                       ),
                     ),
                   ),
